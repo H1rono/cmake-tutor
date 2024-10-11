@@ -1,2 +1,7 @@
 // the configured options and settings for Tutorial
-// TODO 10: Define Tutorial_VERSION_MAJOR and Tutorial_VERSION_MINOR
+
+// clang-format off
+#define VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+#define VERSION_MINOR @PROJECT_VERSION_MINOR@
+#define VERSION_PATCH @PROJECT_VERSION_PATCH@
+// clang-format on

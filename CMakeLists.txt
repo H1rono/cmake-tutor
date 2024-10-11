@@ -9,4 +9,7 @@ configure_file(config.h.in config.h @ONLY)
 
 add_executable(tutorial tutorial.cxx)
 
-# TODO 9: Use target_include_directories to include ${PROJECT_BINARY_DIR}
+target_include_directories(
+    tutorial
+    PUBLIC ${PROJECT_BINARY_DIR}
+)

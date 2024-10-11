@@ -3,12 +3,12 @@
 #include <iostream>
 #include <string>
 
-// TODO 11: Include TutorialConfig.h
+#include "config.h"
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
-        // TODO 12: Create a print statement using Tutorial_VERSION_MAJOR
-        //          and Tutorial_VERSION_MINOR
+        std::cout << argv[0] << " version " << VERSION_MAJOR << "." << VERSION_MINOR
+                  << "." << VERSION_PATCH << std::endl;
         std::cout << "Usage: " << argv[0] << " number" << std::endl;
         return 1;
     }

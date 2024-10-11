@@ -5,8 +5,7 @@ project(cmake-tutor VERSION 0.1.0)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# TODO 8: Use configure_file to configure and copy TutorialConfig.h.in to
-#         TutorialConfig.h
+configure_file(config.h.in config.h @ONLY)
 
 add_executable(tutorial tutorial.cxx)
 

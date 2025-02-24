@@ -1,3 +1,5 @@
+option(USE_MYMATH "whether to use custom sqrt, or standard one" ON)
+
 # TODO 14: Remove mysqrt.cxx from the list of sources
 
 add_library(
@@ -5,10 +7,9 @@ add_library(
     MathFunctions.cxx mysqrt.cxx
 )
 
-# TODO 7: Create a variable USE_MYMATH using option and set default to ON
-
-# TODO 8: If USE_MYMATH is ON, use target_compile_definitions to pass
-# USE_MYMATH as a precompiled definition to our source files
+if (USE_MYMATH)
+    target_compile_definitions(MathFunctions PUBLIC "USE_MYMATH")
+endif()
 
 # TODO 12: When USE_MYMATH is ON, add a library for SqrtLibrary with
 # source mysqrt.cxx

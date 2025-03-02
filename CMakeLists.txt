@@ -16,8 +16,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 configure_file(config.h.in config.h @ONLY)
 
-# TODO 2: Remove EXTRA_INCLUDES list
-
 add_subdirectory(MathFunctions)
 
 add_executable(tutorial tutorial.cxx)
@@ -29,10 +27,7 @@ target_link_libraries(
     PUBLIC MathFunctions
 )
 
-# TODO 3: Remove use of EXTRA_INCLUDES
-
 target_include_directories(
     tutorial
     PUBLIC ${PROJECT_BINARY_DIR}
-    PRIVATE ${PROJECT_SOURCE_DIR}/MathFunctions
 )

@@ -9,9 +9,11 @@ add_library(
 
 if (USE_MYMATH)
     target_compile_definitions(MathFunctions PUBLIC "USE_MYMATH")
-endif()
 
-# TODO 12: When USE_MYMATH is ON, add a library for SqrtLibrary with
-# source mysqrt.cxx
+    add_library(
+        SqrtLibrary STATIC
+        mysqrt.cxx
+    )
+endif()
 
 # TODO 13: When USE_MYMATH is ON, link SqrtLibrary to the MathFunctions Library

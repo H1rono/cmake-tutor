@@ -14,6 +14,6 @@ if (USE_MYMATH)
         SqrtLibrary STATIC
         mysqrt.cxx
     )
-endif()
 
-# TODO 13: When USE_MYMATH is ON, link SqrtLibrary to the MathFunctions Library
+    target_link_libraries(MathFunctions PRIVATE SqrtLibrary)
+endif()

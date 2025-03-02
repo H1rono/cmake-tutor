@@ -1,7 +1,5 @@
 option(USE_MYMATH "whether to use custom sqrt, or standard one" ON)
 
-# TODO 14: Remove mysqrt.cxx from the list of sources
-
 add_library(
     MathFunctions STATIC
     MathFunctions.cxx

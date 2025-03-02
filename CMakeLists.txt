@@ -19,9 +19,6 @@ target_link_libraries(
     PUBLIC MathFunctions
 )
 
-# TODO 4: Add MathFunctions to Tutorial's target_include_directories()
-# Hint: ${PROJECT_SOURCE_DIR} is a path to the project source. AKA This folder!
-
 target_include_directories(
     tutorial
     PUBLIC ${PROJECT_BINARY_DIR}
